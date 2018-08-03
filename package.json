@@ -4,7 +4,8 @@
   "description": "使用Koa,mysql,搭建的后台服务器",
   "main": "index.js",
   "dependencies": {
-    "koa": "^2.5.2"
+    "koa": "^2.5.2",
+    "mysql": "^2.16.0"
   },
   "devDependencies": {
     "koa-bodyparser": "^4.2.1",
