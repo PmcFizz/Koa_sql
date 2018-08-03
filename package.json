@@ -1,0 +1,35 @@
+{
+  "name": "koa_sql",
+  "version": "1.0.0",
+  "description": "使用Koa,mysql,搭建的后台服务器",
+  "main": "index.js",
+  "dependencies": {
+    "koa": "^2.5.2"
+  },
+  "devDependencies": {
+    "koa-bodyparser": "^4.2.1",
+    "koa-helmet": "^4.0.0",
+    "koa-logger": "^3.2.0",
+    "koa-respond": "^1.0.1",
+    "koa-router": "^7.4.0",
+    "opn": "^5.3.0"
+  },
+  "scripts": {
+    "strat": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PmcFizz/Koa_sql.git"
+  },
+  "keywords": [
+    "koa",
+    "mysql"
+  ],
+  "author": "Fizz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PmcFizz/Koa_sql/issues"
+  },
+  "homepage": "https://github.com/PmcFizz/Koa_sql#readme"
+}
