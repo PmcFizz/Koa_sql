@@ -24,7 +24,7 @@ app.use(BodyParser({
 }))
 
 app.use(respond())
-app.use(require('./routes/users.js').routes())
+app.use(require('./routes/base.js').routes())
 app.use(router.allowedMethods())
 
 app.listen(port, () => {

@@ -34,9 +34,39 @@ let query = (sql, values) => {
   })
 }
 
-// 查询website表
-exports.findAllWebSites = () => {
-  let _sql = ` select * from websites;`
+// 查询新闻表
+exports.findAllNews = () => {
+  let _sql = ` select * from t_news;`
+  return query(_sql)
+}
+
+// 查询文章表
+exports.findAllArticles = () => {
+  let _sql = ` select * from t_article;`
+  return query(_sql)
+}
+
+// 查询订单表
+exports.findAllOrders = () => {
+  let _sql = ` select * from t_article;`
+  return query(_sql)
+}
+
+// 查询产品表
+exports.findAllProducts = () => {
+  let _sql = ` select * from t_product;`
+  return query(_sql)
+}
+
+// 查询用户表
+exports.findAllUsers = () => {
+  let _sql = ` select * from t_user;`
+  return query(_sql)
+}
+
+// 查询联系表
+exports.findAllContacts = () => {
+  let _sql = ` select * from t_user;`
   return query(_sql)
 }
 
