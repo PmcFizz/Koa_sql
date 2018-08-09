@@ -8,31 +8,12 @@ const respond = require('koa-respond')
 const port = process.env.PORT || 3000
 const app = new Koa()
 const router = new Router()
-const mysql = require('mysql')
 app.use(Helmet())
 
 if (process.env.NODE_ENV === 'development') {
   app.use(Logger())
 }
 
-// const connection = mysql.createConnection({
-//   host: 'localhost',
-//   user: 'root',
-//   password: '123456',
-//   database: 'test'
-// })
-//
-// connection.connect()
-// let sql = 'SELECT * FROM websites'
-//
-// connection.query(sql, function (err, res) {
-//   if (!err) {
-//     console.log('************')
-//     console.log(res)
-//     console.log('************')
-//   }
-// })
-// connection.end()
 app.use(BodyParser({
   enableTypes: ['json'],
   jsonLimit: '2mb',
@@ -43,8 +24,7 @@ app.use(BodyParser({
 }))
 
 app.use(respond())
-require('./routes')(router)
-app.use(router.routes())
+app.use(require('./routes/users.js').routes())
 app.use(router.allowedMethods())
 
 app.listen(port, () => {

@@ -1,8 +1,10 @@
-function hello (ctx) {
-  let user = ctx.request.query.user
-  ctx.send(201, {user})
-}
+const webSites = require('../mysql/mysql')
 
-module.exports = {
-  hello
+exports.hello = async ctx => {
+  await webSites.findAllWebSites().then(res => {
+    ctx.body = {
+      code: 200,
+      data: res
+    }
+  })
 }

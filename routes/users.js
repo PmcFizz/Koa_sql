@@ -4,4 +4,4 @@ const Ctrl = require('../controllers/users')
 
 router.get('/', Ctrl.hello)
 
-module.exports = router.routes()
+module.exports = router
