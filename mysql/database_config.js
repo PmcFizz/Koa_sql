@@ -1,5 +1,5 @@
 module.exports = {
-  DATABASE: 'test',
+  DATABASE: 'biology',
   USERNAME: 'root',
   PASSWORD: '123456',
   PORT: '3306',

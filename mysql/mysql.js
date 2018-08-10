@@ -48,7 +48,7 @@ exports.findAllArticles = () => {
 
 // 查询订单表
 exports.findAllOrders = () => {
-  let _sql = ` select * from t_article;`
+  let _sql = ` select * from t_order;`
   return query(_sql)
 }
 
@@ -66,7 +66,7 @@ exports.findAllUsers = () => {
 
 // 查询联系表
 exports.findAllContacts = () => {
-  let _sql = ` select * from t_user;`
+  let _sql = ` select * from t_contact;`
   return query(_sql)
 }
 

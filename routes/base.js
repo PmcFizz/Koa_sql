@@ -9,6 +9,4 @@ router.get('/findAllProducts', Base.findAllProducts)
 router.get('/findAllUsers', Base.findAllUsers)
 router.get('/findAllContacts', Base.findAllContacts)
 
-
-
 module.exports = router
