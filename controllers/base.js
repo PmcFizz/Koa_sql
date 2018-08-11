@@ -8,8 +8,8 @@ const biology = require('../mysql/mysql')
 exports.findAllNews = async ctx => {
   await biology.findAllNews().then(res => {
     ctx.body = {
-      code: 200,
-      data: res
+      list: res,
+      pagination: {total: res.length, pageSize: 10, current: 1}
     }
   })
 }
@@ -22,8 +22,8 @@ exports.findAllNews = async ctx => {
 exports.findAllArticles = async ctx => {
   await biology.findAllArticles().then(res => {
     ctx.body = {
-      code: 200,
-      data: res
+      list: res,
+      pagination: {total: res.length, pageSize: 10, current: 1}
     }
   })
 }
@@ -36,8 +36,8 @@ exports.findAllArticles = async ctx => {
 exports.findAllOrders = async ctx => {
   await biology.findAllOrders().then(res => {
     ctx.body = {
-      code: 200,
-      data: res
+      list: res,
+      pagination: {total: res.length, pageSize: 10, current: 1}
     }
   })
 }
@@ -50,8 +50,8 @@ exports.findAllOrders = async ctx => {
 exports.findAllProducts = async ctx => {
   await biology.findAllProducts().then(res => {
     ctx.body = {
-      code: 200,
-      data: res
+      list: res,
+      pagination: {total: res.length, pageSize: 10, current: 1}
     }
   })
 }
@@ -64,8 +64,8 @@ exports.findAllProducts = async ctx => {
 exports.findAllUsers = async ctx => {
   await biology.findAllUsers().then(res => {
     ctx.body = {
-      code: 200,
-      data: res
+      list: res,
+      pagination: {total: res.length, pageSize: 10, current: 1}
     }
   })
 }
@@ -78,8 +78,8 @@ exports.findAllUsers = async ctx => {
 exports.findAllContacts = async ctx => {
   await biology.findAllContacts().then(res => {
     ctx.body = {
-      code: 200,
-      data: res
+      list: res,
+      pagination: {total: res.length, pageSize: 10, current: 1}
     }
   })
 }
