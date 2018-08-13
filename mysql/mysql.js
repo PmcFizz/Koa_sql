@@ -48,7 +48,7 @@ exports.findAllArticles = () => {
 
 // 查询订单表
 exports.findAllOrders = () => {
-  let _sql = ` select * from t_order;`
+  let _sql = ` select t_order.*,t_order_product.product_notes from t_order_product inner join t_order on t_order_product.order_id = t_order.id ;`
   return query(_sql)
 }
 
