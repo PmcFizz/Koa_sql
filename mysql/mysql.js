@@ -65,8 +65,8 @@ exports.findAllUsers = () => {
 }
 
 // 查询联系表
-exports.findAllContacts = () => {
-  let _sql = ` select * from t_contact;`
+exports.findAllContacts = (pageIndex, pageSize) => {
+  let _sql = ` select * from t_contact limit ${pageIndex * pageSize}, ${pageSize};`
   return query(_sql)
 }
 
@@ -185,10 +185,10 @@ exports.findAllContacts = () => {
 //   return query(_sql)
 // }
 // // 查询分页文章
-// exports.findPostByPage = (page) => {
-//   let _sql = ` select * from posts limit ${(page - 1) * 10},10;`
-//   return query(_sql)
-// }
+exports.findPostByPage = (page) => {
+  let _sql = ` select * from posts limit ${(page - 1) * 10},10;`
+  return query(_sql)
+}
 // // 查询个人分页文章
 // exports.findPostByUserPage = (name, page) => {
 //   let _sql = ` select * from posts where name="${name}" order by id desc limit ${(page - 1) * 10},10 ;`

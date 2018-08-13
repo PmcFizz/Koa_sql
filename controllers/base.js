@@ -76,7 +76,9 @@ exports.findAllUsers = async ctx => {
  * @returns {Promise<void>}
  */
 exports.findAllContacts = async ctx => {
-  await biology.findAllContacts().then(res => {
+  // console.log(ctx.request.query) // http://localhost:3000/biology/findAllContacts?page=5 { page: '5' }
+  let {pageIndex = 0, pageSize = 5} = ctx.request.query
+  await biology.findAllContacts(pageIndex, pageSize).then(res => {
     ctx.body = {
       list: res,
       pagination: {total: res.length, pageSize: 10, current: 1}

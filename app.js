@@ -43,6 +43,6 @@ app.use(require('./routes/base.js').routes())
 app.use(router.allowedMethods())
 
 app.listen(port, () => {
-  opn(`http://localhost:${port}`)
+  // opn(`http://localhost:${port}`)
   console.log('服务已正常启动,请开始你的表演,访问地址' + `http://localhost:${port}`)
 })
